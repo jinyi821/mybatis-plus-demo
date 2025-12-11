@@ -42,7 +42,7 @@ public class G1Demo {
             oldGarbage.add(u);                // 强引用，暂时不死
         }
 
-        System.out.println("老年代垃圾制造完成，准备丢弃引用...");
+        System.out.println("老年代垃圾制造完成， 准备丢弃引用...");
         Thread.sleep(2000);
 
         // 第3阶段：丢弃强引用 → 老年代变成纯垃圾
