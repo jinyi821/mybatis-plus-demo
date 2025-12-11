@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/mybatis_plus_demo?useUnicode=true&allowPublicKeyRetrieval=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: root   # 改成你自己的密码
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  # 打印SQL日志（控制台输出）
+  global-config:
+    db-config:
+      id-type: ASSIGN_ID  # 主键策略：雪花算法（推荐）
+      logic-delete-field: deleted  # 逻辑删除字段（可选）
+  mapper-locations: classpath*:/mapper/**/*.xml  # 如果需要自定义XML，可保留；否则可忽略
+
+logging:
+  level:
+    com.example.mybatisplusdemo.mapper: debug   # Mapper SQL 日志（MyBatis Plus 会自动打印）
