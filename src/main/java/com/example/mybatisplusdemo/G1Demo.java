@@ -61,6 +61,6 @@ public class G1Demo {
             }
         }
 
-        Thread.sleep(12000); // 让 G1 有时间完成并发标记和 Mixed GC
+        Thread.sleep(12000); //TODO 让 G1 有时间完成并发标记和 Mixed GC
     }
 }
